@@ -4,6 +4,7 @@ import { useForm } from "@inertiajs/vue3";
 import InputText from "primevue/inputtext";
 import FloatLabel from "primevue/floatlabel";
 import { ref } from "vue";
+import Button from "primevue/button";
 
 const form = useForm<{
     email: string;
