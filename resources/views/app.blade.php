@@ -8,5 +8,6 @@
 </head>
 <body class="dark">
     @inertia
+    @routes
 </body>
 </html>
