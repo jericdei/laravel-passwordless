@@ -5,6 +5,8 @@ import { createApp, h, DefineComponent } from "vue";
 import { Head, Link, createInertiaApp } from "@inertiajs/vue3";
 import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 import { ZiggyVue } from "ziggy-js";
+import PrimeVue from "primevue/config";
+import Lara from "@/Presets/lara";
 
 const appName = import.meta.env.VITE_APP_NAME || "Laravel Passwordless";
 
@@ -21,6 +23,10 @@ createInertiaApp({
             .use(ZiggyVue)
             .component("Head", Head)
             .component("Link", Link)
+            .use(PrimeVue, {
+                unstyled: true,
+                pt: Lara,
+            })
             .mount(el);
     },
     progress: {
