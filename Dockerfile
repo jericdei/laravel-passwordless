@@ -31,6 +31,3 @@ ARG UID=1000
 ARG GID=1000
 RUN useradd -m ${USER} --uid=${UID}
 USER ${UID}:${GID}
-
-# Run Vite Server
-CMD php-fpm & bun run dev
