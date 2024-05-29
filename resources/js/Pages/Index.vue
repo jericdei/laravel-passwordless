@@ -1,5 +1,6 @@
 <script setup lang="ts"></script>
 
 <template>
-    <p>Hello!</p>
+    <Head title="Home" />
+    <p class="text-red-700">Hello!</p>
 </template>
