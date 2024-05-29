@@ -2,4 +2,4 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('login', fn () => dd('test'))->name('login');
+Route::inertia('login', 'Auth/Login')->name('login');
