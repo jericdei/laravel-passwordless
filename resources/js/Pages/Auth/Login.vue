@@ -9,8 +9,10 @@ import Divider from "primevue/divider";
 
 const form = useForm<{
     email: string;
+    name: string;
 }>({
     email: "",
+    name: "",
 });
 
 const isEmail = ref(false);
@@ -46,7 +48,7 @@ function redirectToProvider(provider: string) {
 }
 
 function submit() {
-    console.log(form.data());
+    form.post(route("auth.login.store"));
 }
 </script>
 
@@ -83,6 +85,7 @@ function submit() {
             >
                 <div>
                     <Button
+                        label="Back"
                         icon="ri-arrow-left-line"
                         text
                         severity="contrast"
@@ -98,6 +101,11 @@ function submit() {
                         class="w-full"
                     />
                     <label for="email">Email</label>
+                </FloatLabel>
+
+                <FloatLabel class="mt-4">
+                    <InputText id="name" v-model="form.name" class="w-full" />
+                    <label for="name">Name</label>
                 </FloatLabel>
 
                 <Button type="submit" label="Login" />

@@ -20,6 +20,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Authenticate::redirectUsing(fn () => route('auth.login'));
+        Authenticate::redirectUsing(fn () => route('auth.login.index'));
     }
 }
